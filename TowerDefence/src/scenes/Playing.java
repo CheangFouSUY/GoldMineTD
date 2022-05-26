@@ -31,6 +31,7 @@ public class Playing extends GameScene implements SceneMethods {
     private Tower selectedTower;
     private int goldTick;
     private boolean gamePaused;
+    private boolean speedUp;
 
     public Playing(Game game) {
         super(game);
@@ -218,6 +219,9 @@ public class Playing extends GameScene implements SceneMethods {
     public boolean isGamePaused() { return gamePaused; }
     public void removeOneLife() { actionBar.removeOneLife(); }
 
+    public void setSpeedUp (boolean speedUp) { this.speedUp = speedUp; }
+    public boolean isSpeedUp () { return speedUp; }
+
     public void resetEverything() {
         actionBar.resetEverything();
 
@@ -232,5 +236,6 @@ public class Playing extends GameScene implements SceneMethods {
         selectedTower = null;
         goldTick = 0;
         gamePaused = false;
+        speedUp = false;
     }
 }
