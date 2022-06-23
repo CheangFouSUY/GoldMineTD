@@ -1,6 +1,6 @@
 package main;
 
-import javax.swing.JFrame;
+import javax.swing.JDialog;
 
 import helpz.LoadSave;
 import managers.TileManager;
@@ -10,7 +10,7 @@ import scenes.Menu;
 import scenes.Playing;
 import scenes.Settings;
 
-public class Game extends JFrame implements Runnable {
+public class Game extends JDialog implements Runnable {
 
     private GameScreen gameScreen;
     private Thread gameThread;
@@ -33,10 +33,11 @@ public class Game extends JFrame implements Runnable {
         initClasses();
         createDefaultLevel();
 
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        // setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(640, 800);
         setLocationRelativeTo(null);
         setResizable(false);
-        setTitle("Your Game");
+        setTitle("塔防");
         add(gameScreen);
         pack();
         setVisible(true);
@@ -61,7 +62,7 @@ public class Game extends JFrame implements Runnable {
 
     }
 
-    private void start() {
+    public void start() {
         gameThread = new Thread(this) {};
         gameThread.start();
     }
@@ -96,7 +97,6 @@ public class Game extends JFrame implements Runnable {
 
         long lastFrame = System.nanoTime();
         long lastUpdate = System.nanoTime();
-        long lastTimeCheck = System.currentTimeMillis();
 
         int frames = 0;
         int updates = 0;
@@ -115,12 +115,6 @@ public class Game extends JFrame implements Runnable {
                 lastUpdate = now;
                 updates++;
             }
-            // if (System.currentTimeMillis() - lastTimeCheck >= 1000) {
-            //     System.out.println("FPS: " + frames + " | UPS: " + updates);
-            //     frames = 0;
-            //     updates = 0;
-            //     lastTimeCheck = System.currentTimeMillis();
-            // }
         }
     }
 
@@ -132,4 +126,6 @@ public class Game extends JFrame implements Runnable {
     public Editing getEditor() { return editing; }
     public GameOver getGameOver() { return gameOver; }
     public TileManager getTileManager() { return tileManager; }
+
+    public GameScreen getGameScreen() { return gameScreen; }
 }

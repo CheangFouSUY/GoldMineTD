@@ -1,4 +1,4 @@
-package com.sxt;
+// package com.sxt;
 
 import java.awt.*;
 
@@ -18,7 +18,7 @@ public class Object
     int m;
     //积分
     int count;
-    //标记 1为金块,2为石块
+    //标记 1为金块,2为石块,3为炸弹
     int type;
 
     void paintSelf(Graphics g)

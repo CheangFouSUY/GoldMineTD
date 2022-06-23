@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": [
+        "TowerDefence/src",
+        "GoldMiner/src/com/sxt"
+    ]
+}

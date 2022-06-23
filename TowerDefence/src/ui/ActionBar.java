@@ -14,7 +14,7 @@ import scenes.Playing;
 public class ActionBar extends Bar {
 
     private Playing playing;
-    private MyButton bMenu, bPause, bSpeed;
+    private MyButton bMenu, bPause;
 
     private MyButton[] towerButtons;
     private Tower selectedTower;
@@ -231,13 +231,6 @@ public class ActionBar extends Bar {
 
         if (playing.isGamePaused()) bPause.setText("Unpause");
         else bPause.setText("Pause");
-    }
-
-    private void toggleSpeed() {
-        playing.setSpeedUp(!playing.isSpeedUp());
-        
-        // if (playing.isSpeedUp()) bSpeed.setText("Speed Down");
-        // else bSpeed.setText("Speed Up");
     }
 
     public void mouseClicked(int x, int y) {

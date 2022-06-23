@@ -2,7 +2,6 @@ package managers;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Point;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -22,10 +21,6 @@ public class ProjectileManager {
     private ArrayList<Explosion> explosions = new ArrayList<>();
     private BufferedImage[] proj_imgs, explo_imgs;
     private int proj_id = 0;
-
-    // Temp variables
-    private boolean callTrue;
-    private long lastCall;
 
     public ProjectileManager(Playing playing) {
         this.playing = playing;

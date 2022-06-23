@@ -1,4 +1,4 @@
-package com.sxt;
+// package com.sxt;
 
 import java.awt.*;
 
@@ -15,7 +15,7 @@ public class Gold extends Object
         this.m=30;
         this.count=4;
         this.type=1;
-        this.img = Toolkit.getDefaultToolkit().getImage("imgs/gold1.gif");
+        this.img = Toolkit.getDefaultToolkit().getImage("GoldMiner/imgs/软件工程.png");
     }
 }
 class GoldMini extends Gold
@@ -26,7 +26,7 @@ class GoldMini extends Gold
         this.height=36;
         this.m=15;
         this.count=2;
-        this.img = Toolkit.getDefaultToolkit().getImage("imgs/gold0.gif");
+        this.img = Toolkit.getDefaultToolkit().getImage("GoldMiner/imgs/操作系统.png");
     }
 }
 class GoldPlus extends Gold
@@ -38,7 +38,7 @@ class GoldPlus extends Gold
         this.height=105;
         this.m=60;
         this.count=8;
-        this.img = Toolkit.getDefaultToolkit().getImage("imgs/gold2.gif");
+        this.img = Toolkit.getDefaultToolkit().getImage("GoldMiner/imgs/JAVAOOP.png");
     }
 }
 

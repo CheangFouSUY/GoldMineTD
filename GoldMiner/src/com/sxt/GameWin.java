@@ -1,4 +1,4 @@
-package com.sxt;
+// package com.sxt;
 
 import javax.swing.*;
 import java.awt.*;
@@ -81,7 +81,7 @@ public class GameWin extends JFrame
         this.setVisible(true);
         this.setSize(768,1000);
         this.setLocationRelativeTo(null);
-        this.setTitle("黄金矿工");
+        this.setTitle("捞书人");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         addMouseListener(new MouseAdapter()

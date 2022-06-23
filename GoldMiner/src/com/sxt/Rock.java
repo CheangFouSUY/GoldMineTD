@@ -1,4 +1,4 @@
-package com.sxt;
+// package com.sxt;
 
 import java.awt.*;
 
@@ -12,8 +12,8 @@ public class Rock extends Object
         this.height=71;
         this.flag=false;
         this.m=50;
-        this.count=1;
+        this.count=-5;
         this.type=2;
-        this.img = Toolkit.getDefaultToolkit().getImage("imgs/rock1.png");
+        this.img = Toolkit.getDefaultToolkit().getImage("GoldMiner/imgs/bomb.png");
     }
 }

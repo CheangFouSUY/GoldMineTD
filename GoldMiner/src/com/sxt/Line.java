@@ -1,4 +1,4 @@
-package com.sxt;
+// package com.sxt;
 
 import java.awt.*;
 
@@ -140,6 +140,14 @@ public class Line {
                                 {
                                     //石块
                                     obj.x=-150;
+                                    obj.y=-150;
+                                    obj.flag=false;
+                                    Bg.waterFlag=false;
+                                    state=2;
+                                }
+                                else if (obj.type == 3)
+                                {
+                                    obj.x = -150;
                                     obj.y=-150;
                                     obj.flag=false;
                                     Bg.waterFlag=false;

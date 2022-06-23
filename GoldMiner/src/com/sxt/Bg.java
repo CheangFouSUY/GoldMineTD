@@ -1,4 +1,4 @@
-package com.sxt;
+// package com.sxt;
 
 import java.awt.*;
 
@@ -31,9 +31,9 @@ public class Bg
 
     //载入图片
     Image coin = Toolkit.getDefaultToolkit().getImage("imgs/coin.png");
-    Image bg = Toolkit.getDefaultToolkit().getImage("imgs/bg.jpg");
-    Image bg1 = Toolkit.getDefaultToolkit().getImage("imgs/bg1.jpg");
-    Image peo = Toolkit.getDefaultToolkit().getImage("imgs/peo.png");
+    Image bg = Toolkit.getDefaultToolkit().getImage("GoldMiner/imgs/river.png");
+    Image bg1 = Toolkit.getDefaultToolkit().getImage("GoldMiner/imgs/sky.png");
+    Image peo = Toolkit.getDefaultToolkit().getImage("GoldMiner/imgs/书包人.png");
     Image water = Toolkit.getDefaultToolkit().getImage("imgs/water.png");
     //绘制
     void paintSelf(Graphics g)
@@ -48,10 +48,10 @@ public class Bg
             case 1:
                 g.drawImage(peo,310,50,null);
                 drawWord(g,30,Color.black,"积分:"+count,30,150);
-                //药水组件
+                //药水
                 g.drawImage(water,450,40,null);
                 drawWord(g,30,Color.black,"*"+waterNum,510,70);
-                //金币组件
+                //金币
                 g.drawImage(coin,550,40,null);
                 drawWord(g,30,Color.red,"*"+coinNum,600,70);
                 //关卡数
@@ -67,7 +67,7 @@ public class Bg
                 g.drawImage(water,300,400,null);
                 drawWord(g,30,Color.black,"价格:"+price,300,500);
                 drawWord(g,30,Color.black,"是否购买?",300,550);
-                if(shop)
+                if(shop)//在关卡结束之后会进入商店来决定是否购买药水
                 {
                     count = count-price;
                     waterNum++;
@@ -76,7 +76,7 @@ public class Bg
                     startTime=System.currentTimeMillis();
                 }
                 break;
-            case 3:
+            case 3://状态3失败
                 drawWord(g,80,Color.cyan,"失败",250,350);
                 drawWord(g,80,Color.cyan,"积分:"+count,200,450);
                 break;
@@ -93,7 +93,10 @@ public class Bg
     boolean gameTime()
     {
         long tim = (endTime-startTime)/1000;
-        if(tim>20){return true;}
+        if(tim>20)
+        {
+            return true;
+        }
         return false;
 
     }
